@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            /*Import statements for fonts*/
+            @import url('https://fonts.googleapis.com/css2?family=Spectral:wght@600&display=swap');
+            @import url('https://fonts.googleapis.com/css2?family=Rubik:wght@800&display=swap');
+            @import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap');
+            body {
+                padding: 15px;
+                display: flex;
+                background-color: #4A61E3; /*nice bold blue color*/
+            }
+            /*Border completely surrounding web page*/
+            .border {
+                position: fixed;
+                top: 0;
+                left: 0;
+                border: 30px solid floralwhite;
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+            }
+            /*Navigation bar*/
+            .navbar {
+                clear: both;
+                overflow: auto;
+            }
+            nav {
+                float: right;
+            }
+            .logo img {
+                float: left;
+            }
+            ul li {
+                display: inline-block;
+                padding: 10px;
+                font-size: 20px;
+                color: #F8DD74; /*Soft yellow color*/
+                font-family: 'Abril Fatface', cursive;
+            }
+            ul li:hover {
+                color: #EF8B3F; /*Nice orange shade*/
+            }
+            /*Typewriter effect*/
+            .typewriter h1 {
+                /*font-family: 'Spectral', serif;*/
+                font-family: 'Rubik', sans-serif;
+                color: #EF8B3F; /*Nice orange shade*/
+                font-size: 75px;
+                overflow: hidden; /* Ensures the content is not revealed until the animation */
+                border-right: .15em solid orange; /* The typwriter cursor */
+                white-space: nowrap; /* Keeps the content on a single line */
+                margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+                /*letter-spacing: .15em; /* Adjust as needed */
+                max-width: 38%; /*Keeps from the cursor from moving all the way to the right*/
+                padding: 5px;
+                animation: 
+                    typing 3.5s steps(30, end),
+                    blink-caret .85s step-end infinite;
+            }
+            /* The typing effect */
+            @keyframes typing {
+                from { width: 0 }
+                to { width: 100% }
+            }
+            /* The typewriter cursor effect */
+            @keyframes blink-caret {
+                from, to { border-color: transparent }
+                50% { border-color: orange; }
+            }
+        </style>
+    </head>
+    <body>
+        <div class = "border">
+            <div class = "navbar">
+                <div class = "logo">
+                </div>
+                <nav>
+                    <ul>
+                        <li>Home</li>
+                        <li>Portfolio</li>
+                        <li>Resume</li>
+                        <li>About</li>
+                    </ul>
+                </nav>
+            </div>
+            <br/>
+            <br/>
+            <div class = "typewriter">
+                <h1 style = "margin-left: 0px">Lisa Yamada</h1>
+            </div>
+        </div>
+    </body>
+</html>
