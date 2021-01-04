@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+        <style>
+            /*Import statements for fonts*/
+            @import url('https://fonts.googleapis.com/css2?family=Rubik:wght@800&display=swap');
+            @import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap');
+            @import url('https://fonts.googleapis.com/css2?family=Lora:wght@500&display=swap');
+            body {
+                background-color: #4A61E3; /*nice bold blue color*/
+            }
+            /*Border completely surrounding web page*/
+            .border {
+                position: fixed;
+                top: 0;
+                left: 0;
+                border: 30px solid floralwhite;
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+                overflow-y: scroll;
+                overflow-x: hidden;
+                scroll-behavior: smooth;
+            }
+            /*Navigation bar*/
+            .navbar {
+                clear: both;
+                overflow: auto;
+            }
+            nav {
+                float: right;
+            }
+            .logo img {
+                float: left;
+            }
+            ul li {
+                display: inline-block;
+                padding: 10px;
+                font-size: 20px;
+                color: #F8DD74; /*Soft yellow color*/
+                font-family: 'Abril Fatface', cursive;
+            }
+            ul li:hover {
+                color: #EF8B3F; /*Nice orange shade*/
+            }
+            a:link {
+                text-decoration: none;
+                color: #F8DD74;
+                font-size: 20px;
+            }
+            a:visited {
+                color: #F8DD74;
+            }
+            a:hover {
+                color: #EF8B3F;
+            }
+            a:active {
+                text-decoration: none;
+                color: #F8DD74;
+            }
+            /*Header*/
+            h1 {
+                text-align: center;
+                font-family: 'Rubik', sans-serif;
+                color: #EF8B3F; /*Nice orange shade*/
+                font-size: 75px;
+            }
+            /*Cards*/
+            * {
+                box-sizing: border-box;
+            }
+            .column {
+                float: left;
+                width: 25%;
+                padding: 0 7px;
+            }
+            .row {
+                margin: 0 -5px;
+            }
+            .row:after {
+                content: "";
+                display: table;
+                clear: both;
+            }
+            @media screen and (max-width: 600px) {
+                .column {
+                    width: 100%;
+                    display: block;
+                    margin-bottom: 20px;
+                }
+            }
+            .card {
+                background-color: #4CAF50; /* Green */
+                box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+                padding: 16px;
+                text-align: center;
+                color: #F8DD74; /*Soft yellow color*/
+            }
+            h3,p {
+                font-family: 'Lora', serif;
+            }
+        </style>
+    </head>
+    <body>
+        <div class = "border">
+            <div class = "navbar">
+                <div class = "logo">
+                </div>
+                <nav>
+                    <ul>
+                        <li><a href = "index.html">Home</a></li>
+                        <li>Portfolio</li>
+                        <li><a href = "https://docs.google.com/document/d/1getEwSvK5w0QJBUtlsKW05TpuxYQgao6ncmhcETSGH0/edit?usp=sharing">Resume</a></li>
+                        <li><a href = "about.html">About</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <h1>RECENT PROJECTS</h1>
+            <br/>
+            <div class="row">
+                <div class="column">
+                    <div class="card">
+                        <a href="minesweeper.html"><h3>Minesweeper</h3></a>
+                        <p>Based on the cult-favorite game.</p>
+                    </div>
+                </div>
+                <div class="column">
+                    <div class="card">
+                        <a href="owlsnest.html"><h3>Owl's Nest</h3></a>
+                        <p style="font-size: 10px;">Community hub for the upper division of the Agnes Irwin School.</p>
+                    </div>
+                </div>
+                <div class="column">
+                    <div class="card">
+                        <a href="excellence.html"><h3>Excellence</h3></a>
+                        <p>Animation viewer and editor.</p>
+                    </div>
+                </div>
+                <div class="column">
+                    <div class="card">
+                        <a href="chrome.html"><h3>in progress...</h3></a>
+                        <p>Come back soon!</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
