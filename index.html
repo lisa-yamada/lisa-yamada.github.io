@@ -1,13 +1,15 @@
 <!DOCTYPE html>
 <html>
     <head>
+        <link rel="stylesheet" type="text/css" href="./style.css">
+        <meta charset="UTF-8">
         <style>
             /*Import statements for fonts*/
-            @import url('https://fonts.googleapis.com/css2?family=Spectral:wght@600&display=swap');
             @import url('https://fonts.googleapis.com/css2?family=Rubik:wght@800&display=swap');
             @import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap');
+            @import url('https://fonts.googleapis.com/css2?family=Lora:wght@500&display=swap');
+            /*Body Formatting*/
             body {
-                padding: 15px;
                 display: flex;
                 background-color: #4A61E3; /*nice bold blue color*/
             }
@@ -22,6 +24,8 @@
                 margin: 0;
                 padding: 0;
                 box-sizing: border-box;
+                overflow-y: scroll;
+                scroll-behavior: smooth;
             }
             /*Navigation bar*/
             .navbar {
@@ -34,25 +38,33 @@
             .logo img {
                 float: left;
             }
-            ul li {
+            ul.navi,ul.navi{
                 display: inline-block;
                 padding: 10px;
                 font-size: 20px;
                 color: #F8DD74; /*Soft yellow color*/
                 font-family: 'Abril Fatface', cursive;
             }
-            ul li:hover {
+            ul.navi:hover,ul.navi:hover {
                 color: #EF8B3F; /*Nice orange shade*/
             }
-            a {
+            a.one:link {
+                text-decoration: none;
+                font-size: 20px;
+            }
+            a.one:visited {
                 text-decoration: none;
             }
-            a:active {
+            a.one:hover {
+                text-decoration: none;
+                color: #EF8B3F;
+            }
+            a.one:active {
                 text-decoration: none;
             }
             /*Typewriter effect*/
             .typewriter h1 {
-                /*font-family: 'Spectral', serif;*/
+                margin-left: 20px;
                 font-family: 'Rubik', sans-serif;
                 color: #EF8B3F; /*Nice orange shade*/
                 font-size: 75px;
@@ -63,6 +75,7 @@
                 /*letter-spacing: .15em; /* Adjust as needed */
                 max-width: 38%; /*Keeps from the cursor from moving all the way to the right*/
                 padding: 5px;
+                padding-left: 20px;
                 animation: 
                     typing 3.5s steps(30, end),
                     blink-caret .85s step-end infinite;
@@ -77,26 +90,86 @@
                 from, to { border-color: transparent }
                 50% { border-color: orange; }
             }
+            /*Buttons*/
+            .button {
+                margin-left: 20px;
+                margin-top: 20px;
+                background-color: #4CAF50; /* Green */
+                border: none;
+                color: white;
+                padding: 15px 32px;
+                text-align: center;
+                text-decoration: none;
+                display: inline-block;
+                font-size: 16px;
+                cursor: pointer;
+                color: #F8DD74; /*Soft yellow color*/
+                font-family: 'Lora', serif;
+            }
+            .tour,.projects {
+                background-color: #4A61E3; /*nice bold blue color*/
+                border: 2px solid #4CAF50; /* Green */
+            }
+            .tour:hover,.projects:hover {
+                background-color: #4CAF50; /* Green */
+                color: #F8DD74; /*Soft yellow color*/
+            }
+            /*My Works*/
+            h2 {
+                padding-left: 20px;
+                padding-bottom: 20px;
+                padding-top: 5px;
+                font-size: 60px;
+                color: #F8DD74; /*Soft yellow color*/
+                font-family: 'Rubik', sans-serif;
+                display: inline-block;
+            }
+            h2:hover {
+                color: #4CAF50; /* Green */
+            }
         </style>
     </head>
+    
     <body>
         <div class = "border">
             <div class = "navbar">
                 <div class = "logo">
                 </div>
                 <nav>
-                    <ul>
-                        <li><a href = "https://lisa-yamada.github.io/">Home</a></li>
-                        <li><a href = "https://lisa-yamada.github.io/">Portfolio</a></li>
-                        <li>Resume</li>
-                        <li>About</li>
+                    <ul class="navi">
+                        <li class="navi"><a class="one" href = "index.html">Home</a></li>
+                        <li class="navi"><a class="one" href = "portfolio.html">Portfolio</a></li>
+                        <li class="navi"><a class="one" href = "https://docs.google.com/document/d/1getEwSvK5w0QJBUtlsKW05TpuxYQgao6ncmhcETSGH0/edit?usp=sharing">Resume</a></li>
+                        <li class="navi"><a class="one" href = "about.html">About</a></li>
                     </ul>
                 </nav>
             </div>
             <br/>
             <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
             <div class = "typewriter">
                 <h1 style = "margin-left: 0px">Lisa Yamada</h1>
+            </div>
+            <a class="button tour" href="#myWorks">Take me on a tour!</a>
+            <a class="button projects" href="#myWorks">Check out projects!</a>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <div id="myWorks">
+                <a href="minesweeper.html"><h2>Minesweeper</h2></a>
+                <a href="owlsnest.html"><h2>Owl's Nest</h2></a>
+                <a href="excellence.html"><h2>Excellence: The Easy Animator</h2></a>
+                <a href="chrome.html"><h2>Chrome Application</h2></a>
             </div>
         </div>
     </body>
