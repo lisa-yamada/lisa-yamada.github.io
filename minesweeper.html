@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            /*Import statements for fonts*/
+            @import url('https://fonts.googleapis.com/css2?family=Spectral:wght@600&display=swap');
+            @import url('https://fonts.googleapis.com/css2?family=Rubik:wght@800&display=swap');
+            @import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap');
+            body {
+                padding: 15px;
+                display: flex;
+                background-color: #4A61E3; /*nice bold blue color*/
+            }
+            /*Border completely surrounding web page*/
+            .border {
+                position: fixed;
+                top: 0;
+                left: 0;
+                border: 30px solid floralwhite;
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+                overflow-y: auto;
+                scroll-behavior: smooth;
+            }
+            /*Navigation bar*/
+            .navbar {
+                clear: both;
+                overflow: auto;
+            }
+            nav {
+                float: right;
+            }
+            .logo img {
+                float: left;
+            }
+            ul li {
+                display: inline-block;
+                padding: 10px;
+                font-size: 20px;
+                color: #F8DD74; /*Soft yellow color*/
+                font-family: 'Abril Fatface', cursive;
+            }
+            ul li:hover {
+                color: #EF8B3F; /*Nice orange shade*/
+            }
+            a:link {
+                text-decoration: none;
+                font-size: 20px;
+            }
+            a:visited {
+                color: #F8DD74;
+            }
+            a:hover {
+                color: #EF8B3F;
+            }
+            a:active {
+                text-decoration: none;
+            }
+            /*Header*/
+            h1 {
+                text-align: center;
+                font-family: 'Rubik', sans-serif;
+                color: #EF8B3F; /*Nice orange shade*/
+                font-size: 75px;
+            }
+            h3 {
+                font-family: 'Lora', serif;
+                color: #F8DD74; /*Soft yellow color*/
+                padding-left: 50px;
+                padding-right: 50px;
+            }
+        </style>
+    </head>
+    <body>
+        <div class = "border">
+            <div class = "navbar">
+                <div class = "logo">
+                </div>
+                <nav>
+                    <ul>
+                        <li><a href = "index.html">Home</a></li>
+                        <li><a href = "portfolio.html">Portfolio</a></li>
+                        <li><a href = "https://docs.google.com/document/d/1getEwSvK5w0QJBUtlsKW05TpuxYQgao6ncmhcETSGH0/edit?usp=sharing" target = "_blank">Resume</a></li>
+                        <li><a href = "about.html">About</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <h1>MINESWEEPER</h1>
+            <div style="text-align: center">
+                <div style="display: inline-block; text-align: left">
+                    <h3>A Minesweeper game implemented in Java that a partner and I built for our Fundamentals of Computer Science II course. For this project, we utilized the javalib World Images libraray, Java Event Listeners, and built data structures such as 2D arrays. Below are some screenshots of the board during various moments of game play.</h3>
+                </div>
+                <div style="display: inline-block; float: right">
+                    <img src="ms1.png" width="30%" height="30%">
+                    <img src="ms2.png" width="30%" height="30%">
+                    <img src="ms3.png" width="30%" height="30%">
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
