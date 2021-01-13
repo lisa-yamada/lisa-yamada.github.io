@@ -25,6 +25,8 @@
                 margin: 0;
                 padding: 0;
                 box-sizing: border-box;
+                max-width: 100%;
+                overflow-x: hidden;
                 overflow-y: scroll;
                 scroll-behavior: smooth;
             }
@@ -164,6 +166,19 @@
                 float: left;
                 margin-left: 20px;
                 margin-bottom: 20px;
+                overflow-wrap: break-word;
+            }
+            .miniTypewriter p {
+                margin-left: 20px;
+                font-family: 'Rubik', sans-serif;
+                color: #F8DD74; /*Soft yellow color*/
+                font-size: 40px;
+                overflow: hidden; /* Ensures the content is not revealed until the animation */
+                white-space: nowrap; /* Keeps the content on a single line */
+                margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+                padding: 5px;
+                padding-left: 20px;
+                overflow-wrap: break-word;
             }
         </style>
     </head>
@@ -187,12 +202,19 @@
             <br/>
             <br/>
             <br/>
-            <br/>
             <div class = "typewriter">
                 <h1 style = "margin-left: 0px">Lisa Yamada</h1>
             </div>
-            <a class="button tour" href="#myWorks">Take me on a tour!</a>
+            <div class = "miniTypewriter">
+                <p id = "rotatingText" style = "word-break: break-all"></p>
+            </div>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
             <a class="button projects" href="#myWorks">Check out projects!</a>
+            <a id ="tour" class="button tour" href="#" onclick="null">Tell me more!</a>
+            <br/>
             <br/>
             <br/>
             <br/>
@@ -215,5 +237,97 @@
             <br/>
             <p>Coded by Lisa Yamada</p>
         </div>
+        
+        <script>
+            window.onload = setTimeout(typeWriter1, 2200);
+            
+            var i = 0;
+            var j = 0;
+            var k = 0;
+            var l = 0;
+            var txt1 = "is a CS student at Northeastern.";
+            var txt2 = "But I do other stuff besides code.";
+            var txt3 = "I'm passionate about the environment, and I write about it.";
+            var txt4 = "You can check out my CS-related work below!";
+            var speed = 50;
+            
+            function typeWriter1() {
+                document.getElementById("tour").onclick = null;
+                if (i < txt1.length) {
+                    document.getElementById("rotatingText").innerHTML += txt1.charAt(i);
+                    i++;
+                    setTimeout(typeWriter1, speed);
+                }
+                else {
+                    document.getElementById("tour").onclick = swapText;
+                }
+            }
+            
+            function typeWriter2() {
+                document.getElementById("tour").onclick = null;
+                if (j < txt2.length) {
+                    document.getElementById("rotatingText").innerHTML += txt2.charAt(j);
+                    j++;
+                    setTimeout(typeWriter2, speed);
+                }
+                else {
+                    document.getElementById("tour").onclick = swapText;
+                }
+            }
+            
+            function typeWriter3() {
+                document.getElementById("tour").onclick = null;
+                if (k < txt3.length) {
+                    document.getElementById("rotatingText").innerHTML += txt3.charAt(k);
+                    k++;
+                    setTimeout(typeWriter3, speed);
+                }
+                else {
+                    document.getElementById("tour").onclick = swapText;
+                }
+            }
+            
+            function typeWriter4() {
+                document.getElementById("tour").onclick = null;
+                if (l < txt4.length) {
+                    document.getElementById("rotatingText").innerHTML += txt4.charAt(l);
+                    l++;
+                    setTimeout(typeWriter4, speed);
+                }
+                else {
+                    document.getElementById("tour").onclick = null;
+                    document.getElementById("tour").innerHTML = "&#128072";
+                }
+            }
+            
+            function swapText() {
+                var x = document.getElementById("tour");
+                var toSwap = document.getElementById("rotatingText");
+                
+                document.getElementById("rotatingText").innerHTML = "";
+            
+                if (x.innerHTML === "Tell me more!") {
+                    x.innerHTML = "I'm intrigued";
+                    document.getElementById("rotatingText").innerHTML = "";
+                    typeWriter2.call(this);
+                }
+                else if (x.innerHTML === "I'm intrigued") {
+                    x.innerHTML = "One of my articles linked here";
+                    document.getElementById("rotatingText").innerHTML = "";
+                    typeWriter3.call(this);
+                }
+                else if (x.innerHTML === "One of my articles linked here") {
+                    x.target="_blank";
+                    x.href = "https://www.cleankick.co/post/the-truth-behind-the-meatpacking-industry-and-environmental-racism";
+                    x.innerHTML = "Cool, but let's see some code"
+                }
+                else if (x.innerHTML === "Cool, but let's see some code") {
+                    x.target="_self";
+                    x.href="#";
+                    document.getElementById("rotatingText").innerHTML = "";
+                    typeWriter4.call(this);
+                }
+            }
+        </script>
     </body>
 </html>
