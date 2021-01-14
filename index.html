@@ -312,16 +312,16 @@
                     typeWriter2.call(this);
                 }
                 else if (x.innerHTML === "I'm intrigued") {
-                    x.innerHTML = "One of my articles linked here";
+                    x.innerHTML = "My series linked here";
                     document.getElementById("rotatingText").innerHTML = "";
                     typeWriter3.call(this);
                 }
-                else if (x.innerHTML === "One of my articles linked here") {
+                else if (x.innerHTML === "My series linked here") {
                     x.target="_blank";
-                    x.href = "https://www.cleankick.co/post/the-truth-behind-the-meatpacking-industry-and-environmental-racism";
-                    x.innerHTML = "Cool, but let's see some code"
+                    x.href = "https://www.cleankick.co/series";
+                    x.innerHTML = "Let's see some code!"
                 }
-                else if (x.innerHTML === "Cool, but let's see some code") {
+                else if (x.innerHTML === "Let's see some code!") {
                     x.target="_self";
                     x.href="#";
                     document.getElementById("rotatingText").innerHTML = "";
